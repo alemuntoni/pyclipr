@@ -35,6 +35,8 @@ FUNCTION(PREPEND var prefix)
    SET(${var} "${listVar}" PARENT_SCOPE)
 ENDFUNCTION(PREPEND)
 
+set(EIGEN3_INCLUDE_DIR external/eigen)
+
 if(WIN32)
     # Remove Security definitions for the library
     # Remove run time checks for windows
@@ -43,7 +45,6 @@ if(WIN32)
 
         set(COMMON_LANGUAGE_RUNTIME "")
 
-        set(EIGEN3_INCLUDE_DIR external/eigen)
         #target_compile_options(Clipper2 PRIVATE /W4 /WX)
 
         add_compile_options("/GS-"
