@@ -68,7 +68,7 @@ else(WIN32)
     #target_link_libraries(Clipper2 PUBLIC -lm)
 
     # Find Required packages
-    find_package(Eigen3 3.3 REQUIRED)
+    # find_package(Eigen3 3.3 REQUIRED)
 
 endif(WIN32)
 
